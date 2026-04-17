@@ -35,7 +35,10 @@ project(${PICO_W_PROJECT_NAME} C CXX ASM)
 pico_sdk_init()
 
 add_executable(${PICO_W_PROJECT_NAME})
-target_sources(${PICO_W_PROJECT_NAME} PRIVATE src/main.c)
+target_sources(${PICO_W_PROJECT_NAME} 
+  PRIVATE 
+    src/main.c
+    src/ui.c)
 
 pico_set_program_name(${PICO_W_PROJECT_NAME} "${PICO_W_PROJECT_NAME}")
 pico_set_program_version(${PICO_W_PROJECT_NAME} "0.1")
